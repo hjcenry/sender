@@ -1,0 +1,10 @@
+[server_chan]
+server_chan_key = key1,key2
+
+[mail]
+mail_from_addr = xxx@163.com
+mail_pwd = xxx
+mail_server = MailServer.NETEASY_163
+
+[wx_pusher]
+ids = id1,id2
