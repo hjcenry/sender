@@ -46,7 +46,7 @@ class WxPusher(MsgSender):
         response = requests.request("GET", url, headers=headers, params=querystring)
         result = json.loads(response.text)
         code = result['code']
-        if code is not 200:
-            print("Wx Pusher Err - response[%s]") % response.text
+        if code != 200:
+            print("Wx Pusher Err - response[%s]" % response.text)
             return False
         return True

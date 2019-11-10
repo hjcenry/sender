@@ -8,3 +8,7 @@ mail_server = MailServer.NETEASY_163
 
 [wx_pusher]
 ids = id1,id2
+
+[wx_pusher_v2]
+api_token=token
+ids = id1,id2

@@ -38,7 +38,7 @@ class ServerChan(MsgSender):
             try:
                 result = json.loads(response.text)
                 errno = result['errno']
-                if errno is not 0:
+                if errno != 0:
                     print("Server Chan Err - response[%s]" % response.text)
             except json.decoder.JSONDecodeError:
                 print("Server Chan Decode Err - response[%s]" % response.text)

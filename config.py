@@ -28,7 +28,7 @@ class Config(object):
         :param sec:
         :return:
         """
-        if sec is not None:
+        if sec is not None and sec in self.config_dict:
             return self.config_dict[sec][key]
         else:
             for (k, v) in self.config_dict:

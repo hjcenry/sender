@@ -4,6 +4,7 @@ from mail_server_md import MailMdSender
 from mail_server_smtp import MailSmtpSender
 from server_chan import ServerChan
 from wx_pusher import WxPusher
+from wx_pusher_v2 import WxPusherV2
 
 
 class SenderType(object):
@@ -11,6 +12,7 @@ class SenderType(object):
     MAIL_MD = 2
     SERVER_CHAN = 3
     WX_PUSHER = 4
+    WX_PUSHER_V2 = 5
 
 
 class SenderFactory(object):
@@ -34,5 +36,7 @@ class SenderFactory(object):
             return ServerChan()
         elif int(sender_type) is SenderType.WX_PUSHER:
             return WxPusher()
+        elif int(sender_type) is SenderType.WX_PUSHER_V2:
+            return WxPusherV2()
         else:
             return None
