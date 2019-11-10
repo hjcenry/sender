@@ -19,7 +19,7 @@ class Config(object):
             config_dict[sec] = item_dict
 
         self.config_dict = config_dict
-        print(json.dumps(self.config_dict))
+        # print(json.dumps(self.config_dict))
 
     def get_config(self, key, sec):
         """
