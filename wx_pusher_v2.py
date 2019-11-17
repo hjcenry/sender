@@ -33,7 +33,7 @@ class WxPusherV2(MsgSender):
         token = kwargs['api_token'] if 'api_token' in kwargs and kwargs[
             'api_token'] is not None else sender.config.get_config('api_token', 'wx_pusher_v2')
         push_type = kwargs['sender_type'] if 'sender_type' in kwargs and kwargs[
-            'sender_type'] is not None in kwargs else 1
+            'sender_type'] is not None else 1
         url = "http://wxpusher.zjiecode.com/api/send/message"
         detail_url = kwargs['url'] if 'url' in kwargs else None
         data = {
